@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMPSCI 690: Trustworthy and Responsible AI (TRAI) Syllabus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" />
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary-color: #3273dc;
+            --secondary-color: #1a7caa;
+            --accent-color: #48c774;
+            --text-color: #363636;
+            --light-bg: #f5f7fa;
+            --border-color: #eaeaea;
+        }
+        body {
+            font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        .title, h1, h2, h3, h4, h5, h6 {
+            font-family: "Source Serif 4", Georgia, serif;
+            font-weight: 600;
+            color: #222;
+            line-height: 1.2;
+        }
+        /* Using Bulma's responsive container classes instead of fixed width */
+        .section {
+            padding: 2.5rem 1.5rem;
+        }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            margin-bottom: 2rem;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .nav-item:hover, .nav-item.active {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+        .content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+        .content ul li {
+            margin-bottom: 0.5rem;
+        }
+        .reading-row {
+            background-color: #f8f9fa !important;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .reading-row td {
+            padding-left: 2rem !important;
+            padding-top: 0.25rem !important;
+            padding-bottom: 0.25rem !important;
+            border-top: none !important;
+        }
+        .footer {
+            background-color: var(--light-bg);
+            padding: 2rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+            .section { padding: 1.5rem 0.5rem; }
+            .nav-container { gap: 0.25rem; }
+            .nav-item { padding: 0.6rem 0.8rem; font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="section-nav">
+        <div class="nav-container">
+            <a href="#overview" class="nav-item active">Overview</a>
+            <a href="#expectations" class="nav-item">Expectations</a>
+            <a href="#grading" class="nav-item">Grading</a>
+            <a href="#assignments" class="nav-item">Assignments</a>
+            <a href="#syllabus" class="nav-item">Syllabus</a>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container is-widescreen">
+            <h1 class="title is-2" id="overview">CS 690: Trustworthy and Responsible AI</h1>
+            <div class="content">
+                <p><strong>Instructor:</strong> <a href="../index.html"  target="_blank">Eugene Bagdasaryan</a><br>
+                <strong>TA:</strong> <a href="https://hyejunjeong.github.io/" target="_blank">June Jeong</a><br>
+                <strong>Time:</strong> MoWe 2:30PM - 3:45PM<br>
+                <strong>Location:</strong> Computer Science Bldg rm 142<br>
+                <strong>Office hours:</strong> Eugene: Wed 4-5pm, CS 304<br>
+                </p>
+                <p>In the era of intelligent assistants, autonomous agents, and self-driving cars we expect AI systems to not cause harm and withstand adversarial attacks. In this course you will learn advanced methods of building AI models and systems that mitigate privacy, security, societal, and environmental risks. We will go deep into attack vectors and what type of guarantees current research can and cannot provide for modern generative models. The course will feature extensive hands-on experience with model training and regular discussion of key research papers. <strong>Students are required to have taken NLP, general ML, and security classes before taking this course.</strong></p>
+            </div>
+
+            <h2 class="title is-4 mt-5" id="expectations">Expectations</h2>
+            <div class="content">
+                <ul>
+                    <li>Required reading, attendance, and participation</li>
+                    <li>Each group: weekly presentation + code for assignments</li>
+                    <li>Group research project</li>
+                </ul>
+            </div>
+
+            <h2 class="title is-4 mt-5" id="grading">Grading Breakdown</h2>
+            <div class="content">
+                <div class="columns">
+                    <div class="column is-8">
+                        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Percentage</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Attendance</strong></td>
+                                    <td>10%</td>
+                                    <td>Allowed to miss any 3 classes</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Presentations + code demo</strong></td>
+                                    <td>40%</td>
+                                    <td>2 total (20% each)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Final Project</strong></td>
+                                    <td>50%</td>
+                                    <td>
+                                        <ul>
+                                            <li>1-page Proposal (10%)</li>
+                                            <li>Mid-Semester Presentation (10%)</li>
+                                            <li>Final Report (20%)</li>
+                                            <li>Final Presentation (10%)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>(Optional) bonus</strong></td>
+                                    <td>up to 5%</td>
+                                    <td>Active participation, excellent code implementation, slide efforts</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="title is-4 mt-5" id="assignments">Assignments</h2>
+            <div class="content">
+                <h3 class="title is-5 mt-4">Group Project</h3>
+                <div class="box p-5" style="background-color: #f8fafc; border-left: 4px solid var(--secondary-color);">
+                    <h4 class="title is-6 mb-3">Instructions for Your Project</h4>
+                    <p>You will design an AI Startup and try to defend it against attacks.</p>
+                    
+                    <p><strong>Pre-requisites:</strong></p>
+                    <ul>
+                        <li>You need to operate on customer data, i.e. users, companies</li>
+                        <li>Your product should use LLMs</li>
+                        <li>Your product operates with external parties, i.e. customers, vendors, etc.</li>
+                    </ul>
+                    
+                    <p><strong>Example projects:</strong></p>
+                    <ul>
+                        <li>Customer support bot</li>
+                        <li>AI Tutor</li>
+                        <li>Business assistant</li>
+                        <li>...</li>
+                    </ul>
+                    
+                    <p>Throughout the semester you will add privacy and security features, building a comprehensive analysis of your project.</p>
+                    
+                    <p>Additionally, you will need to pick one of the research topics you are interested in and write an
+                    extensive research report on it.</p>
+                    
+                    <p>Make sure to track your own contributions through Git commits (both code and reports).</p>
+                </div>
+                
+                <h3 class="title is-5 mt-4">Technical Assignments</h3>
+                <ol>
+                    <li>Build synthetic data</li>
+                    <li>Show attacks → train + reconstruction</li>
+                    <li>Implement Federated Learning</li>
+                    <li>Implement Differential Privacy or Private Evolution</li>
+                    <li>PII filtering + CI → airgap, context hijacking</li>
+                    <li>Jailbreaking and prompt injections</li>
+                    <li>Multi-modal attacks</li>
+                    <li>Backdoors</li>
+                    <li>Alignment attacks + RLHF</li>
+                    <li>Resource overhead attacks</li>
+                </ol>
+
+                <h3 class="title is-5 mt-4">Assignment Process</h3>
+                <ol>
+                    <li>Create your repository on GitHub</li>
+                    <li>Share the repository with the teaching staff</li>
+                    <li>For each assignment:
+                        <ul>
+                            <li>One lead author writes a report and conducts main experiments</li>
+                            <li>Other team members advise and consult</li>
+                            <li>The main author receives 80% of the grade, others receive 20%</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3 class="title is-5 mt-4">Submission Requirements</h3>
+                <p>Your code must be functional and well-documented. The report should describe:</p>
+                <ul>
+                    <li>Key design decisions</li>
+                    <li>Implementation details</li>
+                    <li>How the assignment is relevant to your main group project</li>
+                    <li>Findings and results</li>
+                </ul>
+            </div>
+
+            <h2 class="title is-4 mt-5" id="syllabus">Syllabus: Weekly Schedule</h2>
+            <div class="content">
+                <style>
+                    .week-color-1 { background-color: rgba(230, 240, 255, 0.5); }
+                    .week-color-2 { background-color: rgba(255, 250, 240, 0.5); }
+                    .reading-row { background-color: transparent !important; }
+                    .reading-row.week-color-1 { background-color: rgba(230, 240, 255, 0.3) !important; }
+                    .reading-row.week-color-2 { background-color: rgba(255, 250, 240, 0.3) !important; }
+                </style>
+                
+                <table class="table is-fullwidth">
+                  <caption class="has-text-weight-semibold" style="caption-side: top; text-align: left; padding-bottom: 0.5em;">Fall 2025 Class Schedule</caption>
+                  <thead>
+                    <tr>
+                      <th>Week</th>
+                      <th>Class #</th>
+                      <th>Date</th>
+                      <th>Topic</th>
+                      <th>Notes</th>
+                      <th>Links/Slides/Assignments</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <tr class="week-color-1"><td>Week 1</td><td>1</td><td>Wed, Sep 3</td><td>Intro + Project group formations</td><td>First Day of Classes</td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>No reading</td><td></td><td></td></tr>
+
+                   <!-- <tr class="reading-row"><td></td><td></td><td>📖 Paper 1: <a href="https://doi.org/10.48550/arXiv.1802.07228">The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation</a></td><td></td><td></td></tr>
+<tr class="reading-row"><td></td><td></td><td>📖 Paper 2: <a href="https://doi.org/10.48550/arXiv.1610.02413">Equality of Opportunity in Supervised Learning</a></td><td></td><td></td></tr>
+<tr class="reading-row"><td></td><td></td><td>📖 Paper 3: <a href="https://doi.org/10.48550/arXiv.1906.02243">Energy and Policy Considerations for Deep Learning in NLP</a></td><td></td><td></td></tr> -->
+
+<tr class="week-color-2"><td>Week 2</td><td>2</td><td>Mon, Sep 8</td><td>Overview Privacy and Security</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/1611.03814">Towards the Science of Security and Privacy in Machine Learning</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Part 1, Assignment 1:</strong> Build synthetic data</td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td></td><td>3</td><td>Wed, Sep 10</td><td>Privacy. Membership Inference Attacks</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2112.03570">Membership Inference Attacks From First Principles</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Part 2, Assignment 1:</strong> Build synthetic data</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td>Week 3</td><td>4</td><td>Mon, Sep 15</td><td>Privacy. Training Data Attacks</td><td>Last day to add/drop (Grad)</td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2012.07805">Extracting Training Data from Large Language Models</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Part 1, Assignment 2:</strong> Show attacks → train + reconstruction</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td></td><td>5</td><td>Wed, Sep 17</td><td>Privacy. Federated Learning</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/1602.05629">Communication-Efficient Learning of Deep Networks from Decentralized Data</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Part 2, Assignment 2:</strong> Show attacks → train + reconstruction</td><td></td><td></td></tr>
+
+
+<tr class="week-color-2"><td>Week 4</td><td>6</td><td>Mon, Sep 22</td><td>Privacy. Differential Privacy, Part 1. Basics</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/1607.00133">Deep Learning with Differential Privacy</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Part 1, Assignment 3:</strong> Implement Federated Learning</td><td></td><td></td></tr>
+
+
+<tr class="week-color-2"><td></td><td>7</td><td>Wed, Sep 24</td><td>Privacy. Differential Privacy, Part 2. In-Context Learning, Private Evolution</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2305.15560">Differentially Private Synthetic Data via Foundation Model APIs 1: Images</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Part 2, Assignment 3:</strong> Implement Federated Learning</td><td></td><td></td></tr>
+
+
+<tr class="week-color-1"><td>Week 5</td><td>8</td><td>Mon, Sep 29</td><td>Privacy. Data Analytics, PII Filtering with LLMs</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2310.07298">Beyond Memorization: Violating Privacy Via Inference with Large Language Models</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Part 1, Assignment 4:</strong> Implement Differential Privacy or Private Evolution</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td></td><td>9</td><td>Wed, Oct 1</td><td>Privacy. Contextual Integrity</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2405.05175">AirGapAgent: Protecting Privacy-Conscious Conversational Agents</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Part 2, Assignment 4:</strong> Implement Differential Privacy or Private Evolution</td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td>Week 6</td><td>10</td><td>Mon, Oct 6</td><td>Privacy. Student Panel + Future Directions Discussions</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Part 1+2, Assignment 5:</strong> PII filtering + CI → airgap, context hijacking</td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td></td><td>11</td><td>Wed, Oct 8</td><td>Project Presentations. Part 1.</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td>Week 7</td><td>12</td><td>Mon, Oct 13</td><td></td><td><strong>Holiday - Indigenous People's Day (No Class)</strong></td><td></td></tr>
+
+<tr class="week-color-1"><td></td><td>13</td><td>Wed, Oct 15</td><td>No class. Project work</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td>Week 8</td><td>14</td><td>Mon, Oct 20</td><td>Security. Jailbreaks</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2307.15043">Universal and Transferable Adversarial Attacks on Aligned Language Models</a></td><td></td><td></td></tr>
+
+
+<tr class="week-color-2"><td></td><td>15</td><td>Wed, Oct 22</td><td>Security. Prompt injections</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2302.12173">Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Assignment 6:</strong> Jailbreaking and prompt injections</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td>Week 9</td><td>16</td><td>Mon, Oct 27</td><td>Security. Adversarial Examples in Multi-modal systems</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2306.15447">Are aligned neural networks adversarially aligned?</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 2: <a href="https://arxiv.org/abs/2407.08970">Self-interpreting Adversarial Images</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Assignment 7:</strong> Multi-modal attacks</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td></td><td>17</td><td>Wed, Oct 29</td><td>Security. Poisoning and Backdoors</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/1807.00459">How To Backdoor Federated Learning</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Assignment 8:</strong> Backdoors</td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td>Week 10</td><td>18</td><td>Mon, Nov 3</td><td>Security. Watermarks</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2411.18479">SoK: Watermarking for AI-Generated Content</a></td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td></td><td>19</td><td>Wed, Nov 5</td><td>Security. Alignment Attacks</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2502.17424v2">Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Assignment 9:</strong> Alignment attacks + RLHF</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td>Week 11</td><td>20</td><td>Mon, Nov 10</td><td>Security. Principled Defenses</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2503.18813">Defeating Prompt Injections by Design</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 2: <a href="https://arxiv.org/abs/2501.17070">Contextual Agent Security</a></td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td></td><td>21</td><td>Wed, Nov 12</td><td>Security. Student Panel + Future Directions</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td>Week 12</td><td>22</td><td>Mon, Nov 17</td><td>Societal. Model Fairness and Biases</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/1905.12101">Differential Privacy Has Disparate Impact on Model Accuracy</a></td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td></td><td>23</td><td>Wed, Nov 19</td><td>Societal. Propaganda, Misinformation, and Deception</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2112.05224">Propaganda-as-a-service</a></td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td>Week 13</td><td>24</td><td>Mon, Nov 24</td><td>No class. Project work</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td></td><td>25</td><td>Tue, Nov 25</td><td></td><td><strong>Thanksgiving recess begins after last class</strong></td><td></td></tr>
+
+<tr class="week-color-2"><td>Week 14</td><td>26</td><td>Mon, Dec 1</td><td>Environmental. Resource Overhead Attacks</td><td>Classes resume</td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2502.02542">OverThink: Slowdown Attacks on Reasoning LLMs</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Assignment 10:</strong> Resource overhead attacks</td><td></td><td></td></tr>
+
+<tr class="week-color-2"><td></td><td>27</td><td>Wed, Dec 3</td><td>Final Project Presentations. Part 1.</td><td></td><td></td></tr>
+<tr class="reading-row week-color-2"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
+
+<tr class="week-color-1"><td>Week 15</td><td>28</td><td>Mon, Dec 8</td><td>Final Project Presentations. Part 2.</td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
+
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>© UMass Amherst • CS690 Trustworthy and Responsible AI • Last updated June 2025</p>
+        </div>
+    </footer>
+    <script>
+        // Simple nav highlight on click
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
