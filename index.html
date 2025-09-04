@@ -145,12 +145,13 @@
                                 <tr>
                                     <td><strong>Attendance</strong></td>
                                     <td>10%</td>
-                                    <td>Allowed to miss any 3 classes</td>
+                                    <td>Allowed to miss any 4 classes</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Presentations + code demo</strong></td>
+                                    <td><strong>Assignments (slides + report + code)</strong></td>
                                     <td>40%</td>
-                                    <td>2 total (20% each)</td>
+                                    <td>2 total (20% each), allowed 1
+                                    late day per assignment.</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Final Project</strong></td>
@@ -340,8 +341,95 @@
                 </div>
                 </div>
                 <h2 class="title is-4 mt-5" id="assignments">Assignments</h2>
+                
+                <div class="box p-5 mb-5" style="background-color: #f8fafc; border-left: 4px solid var(--accent-color);">
+                    <h3 class="title is-5 mb-3">Week 2 - Privacy
+                    Foundations (Present 9/8 or 9/10 and Report is due 9/12)</h3>
+                    
+                    <h4 class="title is-6 mb-2">Papers:</h4>
+                    <ol>
+                        <li><a href="https://arxiv.org/abs/1611.03814">Towards the Science of Security and Privacy in Machine Learning</a></li>
+                    </ol>
+                    
+                    <h4 class="title is-6 mb-2 mt-4">Presentation</h4>
+                    <div class="content">
+                        <p><strong>Content:</strong></p>
+                        <ul>
+                            <li>Summary of the paper: key contributions, methods, findings.</li>
+                            <li>Connection to your startup/project (e.g., threat models, risks, defenses).</li>
+                            <li>Code Demo (e.g., what is your synthetic data? What characteristics does it have? How did you create it?)</li>
+                        </ul>
+                    </div>
+                    
+                    <h4 class="title is-6 mb-2 mt-4">Reading Report</h4>
+                    <div class="content">
+                        <p><strong>Summarize & critique</strong> (2-3 sentence summary + 1 strength + 1 weakness).</p>
+                        <p><strong>Connect:</strong></p>
+                        <ul>
+                            <li>How does this foundational view of ML privacy/security set the stage for your startup/project?</li>
+                            <li>What are your threat models (e.g., black-box adversary, insider, malicious client)?</li>
+                            <li>What aspects of your data are especially weak (rare examples, outliers, or sensitive subgroups)?</li>
+                            <li>Which kinds of information/features in your dataset must be protected (e.g., PII, health, financial attributes) vs. what is less sensitive?</li>
+                        </ul>
+                        <p><strong>Discussion:</strong></p>
+                        <ul>
+                            <li>Should ML privacy risks be treated as fundamentally new or as extensions of classic security issues?</li>
+                            <li>Should regulators require MIA risk testing for models trained on sensitive data?</li>
+                        </ul>
+                    </div>
+                    
+                    <h4 class="title is-6 mb-2 mt-4">Coding Assignment 1: Build a Synthetic Dataset</h4>
+                    
+                    <p><strong>Goal:</strong> Create a synthetic dataset that represents a real use case. "Synthetic" means you generate the data yourself (programmatically or manually). The dataset should be small but coherent, so later privacy attacks (like membership inference) are meaningful.</p>
+                    
+                    <h5 class="title is-6 mb-2 mt-3">Requirements</h5>
+                    <div class="content">
+                        <p><strong>Any Data Type:</strong> You may choose tabular, text, image, audio, or video — whichever matches your use case idea.</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li><strong>Tabular:</strong> customer transactions, demographic attributes, sensor readings</li>
+                            <li><strong>Text:</strong> user queries, chatbot logs, search queries</li>
+                            <li><strong>Image:</strong> simple generated shapes, icons, or handwritten digits</li>
+                            <li><strong>Audio/Video:</strong> short labeled clips (optional, higher effort)</li>
+                        </ul>
+                        
+                        <p><strong>Size & Labels:</strong></p>
+                        <ul>
+                            <li>At least 100 labeled samples.</li>
+                            <li>Each sample must have a label that allows training/testing (e.g., class label, category).</li>
+                            <li>Data must be manually checked to ensure it's coherent and matches the label.</li>
+                        </ul>
+                        
+                        <p><strong>Use Case Representation:</strong> The dataset should reflect a realistic privacy-sensitive use case. For instance:</p>
+                        <ul>
+                            <li><strong>Customer traces:</strong> synthetic purchases with attributes like age, income, items bought, fraud/not-fraud label.</li>
+                            <li><strong>User queries:</strong> generated text queries (e.g., "book a flight to Boston," "find cardiology specialists") labeled by intent.</li>
+                            <li><strong>Search queries:</strong> short keyword queries labeled with domain/category (e.g., health, finance, shopping).</li>
+                        </ul>
+                    </div>
+                    
+                    <h5 class="title is-6 mb-2 mt-3">Deliverables</h5>
+                    <div class="content">
+                        <p><strong>Dataset file:</strong></p>
+                        <ul>
+                            <li>CSV for tabular</li>
+                            <li>JSON/TXT for text</li>
+                            <li>Folder of files for images/audio</li>
+                        </ul>
+                        
+                        <p><strong>Short README</strong> (1–2 paragraphs) describing:</p>
+                        <ul>
+                            <li>What the dataset represents (use case)</li>
+                            <li>Number of samples and label distribution</li>
+                            <li>How you generated the data (rules, randomization, templates, etc.)</li>
+                            <li>Examples</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3 class="title is-5 mt-4">All Assignments Overview</h3>
                 <ol>
-                    <li>Build synthetic data</li>
+                    <li><strong>Build synthetic data</strong> (detailed above)</li>
                     <li>Show attacks → train + reconstruction</li>
                     <li>Implement Federated Learning</li>
                     <li>Implement Differential Privacy and Private Evolution</li>
