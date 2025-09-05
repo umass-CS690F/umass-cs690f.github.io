@@ -91,6 +91,16 @@
             .nav-container { gap: 0.25rem; }
             .nav-item { padding: 0.6rem 0.8rem; font-size: 0.95rem; }
         }
+        
+            /* new assignment tweaks */
+    #week3-assignment1 .content ul li,
+    #week3-assignment1 ul li {
+      margin-bottom: 0.35rem;
+    }
+    #week3-assignment1 .box ul li {
+      margin-bottom: 0.3rem;
+    }
+
     </style>
 </head>
 <body>
@@ -201,14 +211,14 @@
                     </tr>
                   </thead>
                   <tbody>
-                   <tr class="week-color-1"><td>Week 1</td><td>1</td><td>Wed, Sep 3</td><td>Intro + Project group formations</td><td>First Day of Classes</td><td></td></tr>
+                   <tr class="week-color-1"><td>Week 1</td><td>1</td><td>Wed, Sep 3</td><td>Intro + Project group formations</td><td>First Day of Classes</td><td><a href="#week2-startup">Bonus Assignment: Startup ideas</a></td></tr>
 <tr class="reading-row week-color-1"><td></td><td></td><td></td><td>No reading</td><td></td><td></td></tr>
 
                    <!-- <tr class="reading-row"><td></td><td></td><td>📖 Paper 1: <a href="https://doi.org/10.48550/arXiv.1802.07228">The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation</a></td><td></td><td></td></tr>
 <tr class="reading-row"><td></td><td></td><td>📖 Paper 2: <a href="https://doi.org/10.48550/arXiv.1610.02413">Equality of Opportunity in Supervised Learning</a></td><td></td><td></td></tr>
 <tr class="reading-row"><td></td><td></td><td>📖 Paper 3: <a href="https://doi.org/10.48550/arXiv.1906.02243">Energy and Policy Considerations for Deep Learning in NLP</a></td><td></td><td></td></tr> -->
 
-<tr class="week-color-2"><td>Week 2</td><td>2</td><td>Mon, Sep 8</td><td>Overview Privacy and Security</td><td></td><td></td></tr>
+<tr class="week-color-2"><td>Week 2</td><td>2</td><td>Mon, Sep 8</td><td>Overview Privacy and Security</td><td></td><td><a href="#week3-assignment1">Assignment 1 (Due 9/19)</a></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/1611.03814">Towards the Science of Security and Privacy in Machine Learning</a></td><td></td><td></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Part 1, Assignment 1:</strong> Build synthetic data</td><td></td><td></td></tr>
 
@@ -340,86 +350,15 @@
                     <p>Make sure to track your own contributions through Git commits (both code and reports).</p>
                 </div>
                 </div>
-                <h2 class="title is-4 mt-5" id="assignments">Assignments</h2>
-                
-                <div class="box p-5 mb-5" style="background-color: #f8fafc; border-left: 4px solid var(--accent-color);">
-                    <h3 class="title is-5 mb-3"> (Bonus) Week 2 - Startup ideas
-                    and Group Formation</h3>
-                    
-                    <h4 class="title is-6 mb-2">Papers:</h4>
-                    <ol>
-                        <li><a href="https://arxiv.org/abs/1611.03814">Towards the Science of Security and Privacy in Machine Learning</a></li>
-                    </ol>
-                    
-                    <h4 class="title is-6 mb-2 mt-4">Presentation: <a
-                    href="https://docs.google.com/presentation/d/1yrLf_wToBqQnFK1d1mCMFCo6IW5QKJFV3MYqTs-uNe8/edit?usp=sharing">Add
-                    slides here!</a></h4>
-                    <div class="content">
-                        <p><strong>Content:</strong></p>
-                        <ul>
-                            <li>Present your ideas for a startup for 5
-                            minutes.</li>
-                            <li>Show how the startup touches on user
-                            data and opens up privacy/security
-                            challenges.</li>
-                            <li>Form groups.</li>
-                            <li>Don't forget about Slack! <a href="https://join.slack.com/t/cs690trustwor-vhd9016/shared_invite/zt-3cho5jdf8-rnmFegIyajqvg4aj9TGMZg">Join here!</a></li>
 
-                        </ul>
-                        This assignment is not graded! But best ideas will get bonus points.
-                    </div>
-                    <!-- <h4 class="title is-6 mb-2 mt-4">BonusCoding Assignment 1: Build a Synthetic Dataset</h4>
-                    
-                    <p><strong>Goal:</strong> Create a synthetic dataset that represents a real use case. "Synthetic" means you generate the data yourself (programmatically or manually). The dataset should be small but coherent, so later privacy attacks (like membership inference) are meaningful.</p>
-                    
-                    <h5 class="title is-6 mb-2 mt-3">Requirements</h5>
-                    <div class="content">
-                        <p><strong>Any Data Type:</strong> You may choose tabular, text, image, audio, or video — whichever matches your use case idea.</p>
-                        <p><strong>Examples:</strong></p>
-                        <ul>
-                            <li><strong>Tabular:</strong> customer transactions, demographic attributes, sensor readings</li>
-                            <li><strong>Text:</strong> user queries, chatbot logs, search queries</li>
-                            <li><strong>Image:</strong> simple generated shapes, icons, or handwritten digits</li>
-                            <li><strong>Audio/Video:</strong> short labeled clips (optional, higher effort)</li>
-                        </ul>
-                        
-                        <p><strong>Size & Labels:</strong></p>
-                        <ul>
-                            <li>At least 100 labeled samples.</li>
-                            <li>Each sample must have a label that allows training/testing (e.g., class label, category).</li>
-                            <li>Data must be manually checked to ensure it's coherent and matches the label.</li>
-                        </ul>
-                        
-                        <p><strong>Use Case Representation:</strong> The dataset should reflect a realistic privacy-sensitive use case. For instance:</p>
-                        <ul>
-                            <li><strong>Customer traces:</strong> synthetic purchases with attributes like age, income, items bought, fraud/not-fraud label.</li>
-                            <li><strong>User queries:</strong> generated text queries (e.g., "book a flight to Boston," "find cardiology specialists") labeled by intent.</li>
-                            <li><strong>Search queries:</strong> short keyword queries labeled with domain/category (e.g., health, finance, shopping).</li>
-                        </ul>
-                    </div>
-                    
-                    <h5 class="title is-6 mb-2 mt-3">Deliverables</h5>
-                    <div class="content">
-                        <p><strong>Dataset file:</strong></p>
-                        <ul>
-                            <li>CSV for tabular</li>
-                            <li>JSON/TXT for text</li>
-                            <li>Folder of files for images/audio</li>
-                        </ul>
-                        
-                        <p><strong>Short README</strong> (1–2 paragraphs) describing:</p>
-                        <ul>
-                            <li>What the dataset represents (use case)</li>
-                            <li>Number of samples and label distribution</li>
-                            <li>How you generated the data (rules, randomization, templates, etc.)</li>
-                            <li>Examples</li>
-                        </ul>
-                    </div> -->
-                </div>
-                
+
+
+                <h2 class="title is-4 mt-5" id="assignments">Assignments</h2>
+
+                <div class="content">
                 <h3 class="title is-5 mt-4">All Assignments Overview</h3>
                 <ol>
-                    <li><strong>Build synthetic data</strong> (detailed above)</li>
+                    <li><strong>Build synthetic data</strong> (detailed below)</li>
                     <li>Show attacks → train + reconstruction</li>
                     <li>Implement Federated Learning</li>
                     <li>Implement Differential Privacy and Private Evolution</li>
@@ -430,29 +369,228 @@
                     <li>Alignment attacks + RLHF</li>
                     <li>Resource overhead attacks</li>
                 </ol>
-
                 <h3 class="title is-5 mt-4">Assignment Process</h3>
+                <div class="content">
                 <ol>
-                    <li>Create your repository on GitHub</li>
-                    <li>Share the repository with the teaching staff</li>
-                    <li>For each assignment:
-                        <ul>
-                            <li>One lead author writes a report and conducts main experiments</li>
-                            <li>Other team members advise and consult</li>
-                            <li>The main author receives 80% of the grade, others receive 20%</li>
-                        </ul>
+                    <li><strong>Create your repository:</strong> Each team must create a repository on GitHub.</li>
+                    <li><strong>Share access:</strong> Add the teaching staff as collaborators.</li>
+                    <li><strong>Roles:</strong>
+                    <ul>
+                        <li>One <em>lead author</em> writes the report and conducts the main experiments.</li>
+                        <li>Other team members advise and consult.</li>
+                        <li>The lead author receives <strong>80%</strong> of the grade, other members receive <strong>20%</strong>.</li>
+                    </ul>
                     </li>
                 </ol>
 
-                <h3 class="title is-5 mt-4">Submission Requirements</h3>
-                <p>Your code must be functional and well-documented. The report should describe:</p>
+                <h4 class="title is-6 mt-4">Structure of Each Assignment</h4>
                 <ul>
-                    <li>Key design decisions</li>
-                    <li>Implementation details</li>
-                    <li>How the assignment is relevant to your main group project</li>
-                    <li>Findings and results</li>
+                    <li><strong>Reading Report:</strong> Summarize, critique, and connect the assigned papers to your project. <br><em>Include key discussion points from class as well.</em></li>
+                    <li><strong>Code:</strong> Implement the required attacks/defenses, include documentation and results.</li>
+                    <li><strong>Presentation:</strong> Prepare a short slide deck summarizing your findings.</li>
                 </ul>
+
+                <h4 class="title is-6 mt-4">Deadlines & Presentations</h4>
+                <ul>
+                    <li><strong>Due:</strong> Slide deck, reading report, and code are due <em>Friday of that week, 11:59 PM EST</em>.</li>
+                    <li><strong>Presentation:</strong> Happens at the beginning of the <em>following week’s class</em>.</li>
+                </ul>
+                </div>
             </div>
+
+<!-- WEEK 2 STARTUP IDEA (clean layout) -->
+<div id="week2-startup" class="box p-5 mb-6" style="background-color:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">(Bonus) Week 2 – Startup Ideas & Group Formation</h3>
+    <span class="tag is-info is-light is-medium">Not graded · Bonus points for best ideas</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul>
+          <li>Paper: <a href="https://arxiv.org/abs/1611.03814">Towards the Science of Security and Privacy in Machine Learning</a></li>
+          <li>
+            Slide deck: <a href="https://docs.google.com/presentation/d/1yrLf_wToBqQnFK1d1mCMFCo6IW5QKJFV3MYqTs-uNe8/edit?usp=sharing" target="_blank">
+              Add Slides here!
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Week 2 class:</strong> Present your startup idea in-class (~5 minutes).</li>
+          <li><strong>During class:</strong> Form project groups.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="box p-4" style="background:white;">
+    <h4 class="title is-6 mb-3">Content</h4>
+    <div class="content">
+    <ul>
+      <li>Present your ideas for a startup for 5 minutes.</li>
+      <li>Show how the startup touches on user data and opens up privacy/security challenges.</li>
+      <li>Form groups.</li>
+      <li>
+        Don’t forget about Slack! 
+        <a href="https://join.slack.com/t/cs690trustwor-vhd9016/shared_invite/zt-3cho5jdf8-rnmFegIyajqvg4aj9TGMZg" target="_blank">Join here</a>
+      </li>
+    </ul>
+    </div>
+    <p class="mt-3"><em>This assignment is not graded! But best ideas will get bonus points.</em></p>
+  </div>
+</div>
+
+<!-- WEEK 3 ASSIGNMENT (clean layout) -->
+<section id="week3-assignment1" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">Week 3 — Build a Synthetic Dataset & MIA/Extraction Attack</h3>
+    <span class="tag is-success is-light is-medium">Due Fri 9/19 · 11:59 PM EST</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul class="mb-2">
+          <li>Paper: <a href="https://arxiv.org/abs/2112.03570">Membership Inference Attacks From First Principles</a></li>
+          <li>Focus: Synthetic data → Train → Attack → (optional) Reconstruct</li>
+        </ul>
+        <p class="mb-1"><strong>What to submit:</strong></p>
+        <ul class="mt-1">
+          Slide deck <a href="https://docs.google.com/presentation/d/1yrLf_wToBqQnFK1d1mCMFCo6IW5QKJFV3MYqTs-uNe8/edit?usp=sharing" target="_blank">
+            (Google Slides link)</a>
+          <li>Reading report (PDF) to Gradescope</li>
+          <li>Code & dataset to Github Repo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Friday 11:59 PM EST:</strong> slides + reading report + code due</li>
+          <li><strong>Next class:</strong> short in-class presentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reading Report -->
+  <h4 class="title is-5 mt-2 mb-3">Reading Report</h4>
+  <div class="content">
+    <p><strong>Summarize &amp; critique:</strong> 2–3 sentence summary + 1 strength + 1 weakness.</p>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Connect</p>
+        <ul>
+          <li>How do MIAs exploit overfitting? How does this connect to your MIA implementation?</li>
+          <li>How does data extraction differ from MIAs, and why are LLMs vulnerable?</li>
+          <li>Is your dataset vulnerable to MIA? Why?</li>
+          <li>What privacy protections does FL claim, and what risks remain?</li>
+          <li>What new attack surface does FL introduce?</li>
+          <li>Would FL improve privacy for your project? Why/why not?</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Discussion</p>
+        <ul>
+          <li>What properties of training data make extraction more dangerous?</li>
+          <li>Is FL primarily a privacy technique or a scalability/availability technique?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+
+  <!-- Coding Assignment -->
+  
+  <h4 class="title is-5 mb-2">Coding Assignment 1</h4>
+  <p class="mb-4"><strong>Goal:</strong> (1) Build a synthetic dataset and train a model. (2) Run a membership inference attack (image) or a training-data extraction demo (text). <em>Bonus:</em> do both.</p>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Task 1. Build a Synthetic Dataset — Requirements</h5>
+    <div class="content">
+    <ul>
+      <li><strong>Create a realistic synthetic dataset.</strong> Programmatic or manual; small but coherent.</li>
+      <li><strong>Any data type:</strong> tabular, text, image, audio, or video (the product should still use an LLM).</li>
+      <li><strong>Size &amp; labels:</strong>
+        <ul>
+          <li>≥ <strong>100</strong> labeled samples.</li>
+          <li>Labels suitable for training/testing (class/category).</li>
+          <li>Manual sanity-check for coherence and correct labels.</li>
+        </ul>
+      </li>
+      <li><strong>Use-case representation:</strong> realistic privacy-sensitive scenario. Examples:
+        <ul>
+          <li><em>Tabular:</em> customer transactions, demographics, sensors.</li>
+          <li><em>Text:</em> user queries, chatbot logs, search queries.</li>
+          <li><em>Image:</em> simple shapes, icons, handwritten digits.</li>
+          <li><em>Audio/Video:</em> short labeled clips (optional).</li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Task 2. Attack — Requirements</h5>
+    <div class="content">
+    <ul>
+      <li>Train a <strong>baseline model</strong> suitable for your data type.</li>
+      <li>Implement <strong>MIA</strong> or <strong>training-data extraction</strong> and report
+        <strong>AUC/attack accuracy</strong> or a justified qualitative score.</li>
+      <li><strong>Analyze</strong> why attack strength matches (or not) reconstruction quality.</li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="box p-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
+    <div class="content">
+    <ul>
+      <li><strong>Dataset file</strong> — CSV (tabular), JSON/TXT (text), or folder (images/audio)</li>
+      <li><strong>Attack code</strong></li>
+      <li><strong>README</strong> with:
+        <ul>
+          <li>Dataset (use case, #samples &amp; label distribution, generation method, examples)</li>
+          <li>Attack details (design choices, implementation, metrics &amp; results, vulnerability analysis, implications)</li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <h4 class="title is-5 mb-2">Presentation</h4>
+    <div class="content">
+    <ul>
+        <li><strong>Upload:</strong> Add your slides to the shared 
+        <a href="https://docs.google.com/presentation/d/1yrLf_wToBqQnFK1d1mCMFCo6IW5QKJFV3MYqTs-uNe8/edit?usp=sharing" target="_blank">
+        class slide deck</a> under <em>Week 3</em>.</li>
+        <li><strong>Summary:</strong> Summarize the assigned paper(s) — key contributions, methods, findings.</li>
+        <li><strong>Connection:</strong> Relate to your startup/project (threat models, risks, defenses).</li>
+        <li><strong>Dataset details:</strong> Briefly explain your synthetic dataset and attack setup.</li>
+        <li><strong>Demo:</strong> Show preliminary results (success rate, reconstruction quality, and why).</li>
+    </ul>
+    </div>
+
+</section>
+
+
+
         </div>
     </section>
     <footer class="footer">
