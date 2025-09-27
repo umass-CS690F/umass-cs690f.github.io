@@ -252,7 +252,7 @@ Differential Privacy</a></td><td></td><td></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 2: <a href="https://arxiv.org/abs/2501.18914">Scaling Laws for Differentially Private Language Models</a></td><td></td><td></td></tr>
 <!-- <tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Part 1, Assignment 3:</strong> Implement Federated Learning</td><td></td><td></td></tr> -->
 
-<tr class="week-color-2"><td></td><td>7</td><td>Wed, Sep 24</td><td>Privacy. Differential Privacy, Part 2. In-Context Learning, Private Evolution</td><td></td><td></td></tr>
+<tr class="week-color-2"><td></td><td>7</td><td>Wed, Sep 24</td><td>Privacy. Differential Privacy, Part 2. In-Context Learning, Private Evolution</td><td></td><td><a href="#week5-assignment3">Assignment 3 Release (Due 10/3)</a></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2305.15560">Differentially Private Synthetic Data via Foundation Model APIs 1: Images</a></td><td></td><td></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 2: <a href="https://arxiv.org/abs/1710.06963">Learning Differentially Private Recurrent Language Models</a></td><td></td><td></td></tr>
 
@@ -718,6 +718,125 @@ Differential Privacy</a></td><td></td><td></td></tr>
     </div>
 </div>
 
+<section id="week5-assignment3" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">Week 5 — HW 3: Differential Privacy (DP-SGD)</h3>
+    <span class="tag is-success is-light is-medium">Presentation Wed 10/1 · Report & Code Due Fri 10/3 · 11:59 PM ET</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul class="mb-2">
+          <li>📖 Paper 1: <a href="https://arxiv.org/abs/1607.00133" target="_blank">Deep Learning with Differential Privacy</a></li>
+          <li>📖 Paper 2: <a href="https://arxiv.org/abs/2305.15560" target="_blank">Differentially Private Synthetic Data via Foundation Model APIs: Images</a></li>
+          <li>Focus: DP-SGD methods & guarantees, privacy–utility trade-offs, implications for your project.</li>
+        </ul>
+        <p class="mb-1"><strong>What to submit:</strong></p>
+        <ul class="mt-1">
+          <li>Slide deck (add to shared class deck)</li>
+          <li>Reading report (PDF) → Gradescope</li>
+          <li>Code + README → GitHub repo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Wed 10/1 (in class):</strong> 2–3 min presentation + quick DP demo</li>
+          <li><strong>Fri 10/3 11:59 PM ET:</strong> reading report + code + README due</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Presentation -->
+  <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (10/1)</h4>
+  <div class="content">
+    <ul>
+      <li><strong>Summary:</strong> Methods (DP-SGD / DP mechanisms), guarantees, and utility costs (2–3 bullets).</li>
+      <li><strong>Connection:</strong> Where DP fits in your threat model & deployment scenario.</li>
+      <li><strong>Code demo:</strong> Show one DP-SGD run with noise level and <em>ε</em> estimate; note the utility drop.</li>
+    </ul>
+  </div>
+
+  <!-- Reading Report -->
+  <h4 class="title is-5 mt-2 mb-3">Reading Report (Due 10/3)</h4>
+  <div class="content">
+    <p><strong>Summarize &amp; critique:</strong> 2–3 sentence summary + 1 strength + 1 weakness for each paper.</p>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Connect</p>
+        <ul>
+          <li>How does DP mitigate MIA/extraction risks from Week 3?</li>
+          <li>How does DP synthetic data extend DP principles? What new risks arise?</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Discussion</p>
+        <ul>
+          <li>When is the privacy–utility trade-off “good enough” for your use case?</li>
+          <li>Should synthetic data be evaluated separately for privacy and fairness?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Coding Assignment -->
+  <h4 class="title is-5 mb-2">Coding Assignment 3: Add DP (Training with <span class="is-family-monospace">DP-SGD</span>)</h4>
+  <p class="mb-4"><strong>Goal:</strong> Apply <strong>DP-SGD</strong> to your Week-3 pipeline and evaluate privacy & utility.</p>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Requirements (DP-SGD only)</h5>
+    <div class="content">
+      <ul>
+        <li>Use <strong>per-example clipping</strong> and <strong>Gaussian noise</strong> via <strong>Opacus</strong> or <strong>TF-Privacy</strong>.</li>
+        <li><strong>Compute &amp; report</strong> <em>ε(δ)</em> with the library’s accountant (set <em>δ = 1/N</em>).</li>
+        <li>Sweep a small grid:
+          <ul>
+            <li><strong>Clip norm C</strong> ∈ {0.5, 1.0}</li>
+            <li><strong>Noise multiplier σ</strong> ∈ {0.5, 1.0, 2.0}</li>
+          </ul>
+        </li>
+        <li>Keep runtime modest (reasonable batch size & epochs); fix other hypers as needed.</li>
+        <li>(Optional) Re-run your Week-3 <strong>MIA/extraction</strong> on the best DP setting to show impact.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">What to Report</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Compare to non-DP baseline</strong> (Week-3 best).</li>
+        <li><strong>Effect of hyperparameters</strong></li>
+        <li>(Optional) MIA/extraction metric change on best DP setting.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box p-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Code</strong> with DP-SGD enabled (Opacus/TF-Privacy).</li>
+        <li><strong>README</strong> including:
+          <ul>
+            <li><strong>Design &amp; implementation:</strong> where per-example clipping & noise are applied.</li>
+            <li><strong>Settings:</strong> dataset, model, batch size, epochs, <span class="is-family-monospace">C, σ</span>, learning rate, seed(s).</li>
+            <li><strong>Results:</strong> table/figure with <em>ε(δ)</em> and utility vs. baseline.</li>
+            <li><strong>Takeaways:</strong> 2–4 bullets about the privacy–utility trade-off for your project.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 
     <!-- POLICIES SECTION -->
