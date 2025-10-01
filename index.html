@@ -86,6 +86,77 @@
             padding: 2rem 1.5rem;
             font-size: 0.9rem;
         }
+        
+        /* Assignment Sidebar */
+        .assignment-sidebar {
+            position: fixed;
+            right: 0;
+            top: 100px;
+            width: 220px;
+            background-color: white;
+            border-left: 2px solid var(--border-color);
+            padding: 1.5rem 1rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 50;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.05);
+        }
+        
+        .assignment-sidebar h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .assignment-nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .assignment-nav-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .assignment-nav-link {
+            display: block;
+            padding: 0.6rem 0.8rem;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .assignment-nav-link:hover {
+            background-color: var(--light-bg);
+            border-left-color: var(--secondary-color);
+            padding-left: 1rem;
+        }
+        
+        .assignment-nav-link.active {
+            background-color: var(--secondary-color);
+            color: white;
+            border-left-color: var(--accent-color);
+        }
+        
+        .main-content {
+            margin-right: 240px;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .assignment-sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-right: 0;
+            }
+        }
+        
         @media screen and (max-width: 768px) {
             .section { padding: 1.5rem 0.5rem; }
             .nav-container { gap: 0.25rem; }
@@ -104,6 +175,18 @@
     </style>
 </head>
 <body>
+    <!-- Assignment Sidebar -->
+    <aside class="assignment-sidebar">
+        <h4>Assignments</h4>
+        <ul class="assignment-nav-list">
+            <li><a href="#week2-startup" class="assignment-nav-link">Week 2 - Startup Ideas</a></li>
+            <li><a href="#week3-assignment1" class="assignment-nav-link">Assignment 1</a></li>
+            <li><a href="#week4-assignment2" class="assignment-nav-link">Assignment 2</a></li>
+            <li><a href="#week5-assignment3" class="assignment-nav-link">Assignment 3</a></li>
+            <li><a href="#week6-assignment4" class="assignment-nav-link">Assignment 4</a></li>
+        </ul>
+    </aside>
+
     <nav class="section-nav">
         <div class="nav-container">
             <a href="#overview" class="nav-item active">Overview</a>
@@ -115,7 +198,7 @@
             <a href="#policies" class="nav-item">Policies</a>
         </div>
     </nav>
-    <section class="section">
+    <section class="section main-content">
         <div class="container is-widescreen">
             <h1 class="title is-2" id="overview">CS 690: Trustworthy and Responsible AI</h1>
             <div class="content">
@@ -640,7 +723,7 @@ href="#midterm-annc">Mid-Sem Presentation</a></td></tr>
 <!-- WEEK 4 ASSIGNMENT (clean layout) -->
 <section id="week4-assignment2" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
   <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-    <h3 class="title is-4 mb-0">Week 4 — HW 2: Federated Learning</h3>
+    <h3 class="title is-4 mb-0">Week 4 — Assignment 2: Federated Learning</h3>
     <span class="tag is-success is-light is-medium">Presentation 9/24 · Report & Code Due Fri 9/26 · 11:59 PM ET</span>
   </header>
 
@@ -756,7 +839,7 @@ href="#midterm-annc">Mid-Sem Presentation</a></td></tr>
 
 <section id="week5-assignment3" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
   <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-    <h3 class="title is-4 mb-0">Week 5 — HW 3: Differential Privacy (DP-SGD)</h3>
+    <h3 class="title is-4 mb-0">Week 5 — Assignment 3: Differential Privacy (DP-SGD)</h3>
     <span class="tag is-success is-light is-medium">Presentation Wed 10/1 · Report & Code Due Fri 10/3 · 11:59 PM ET</span>
   </header>
 
@@ -875,7 +958,7 @@ href="#midterm-annc">Mid-Sem Presentation</a></td></tr>
 
 <section id="week6-assignment4" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
   <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-    <h3 class="title is-4 mb-0">Week 5 — HW 4: PII Filtering</h3>
+    <h3 class="title is-4 mb-0">Week 5 — Assignment 4: PII Filtering</h3>
     <span class="tag is-success is-light is-medium">Presentation Wed 10/8 · Report & Code Due Fri 10/10 · 11:59 PM ET</span>
   </header>
 
@@ -1089,6 +1172,40 @@ href="#midterm-annc">Mid-Sem Presentation</a></td></tr>
                 this.classList.add('active');
             });
         });
+        
+        // Assignment sidebar navigation
+        document.querySelectorAll('.assignment-nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                document.querySelectorAll('.assignment-nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Highlight active assignment on scroll
+        const assignmentSections = document.querySelectorAll('[id^="week"]');
+        const assignmentLinks = document.querySelectorAll('.assignment-nav-link');
+        
+        function highlightActiveAssignment() {
+            let current = '';
+            
+            assignmentSections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            assignmentLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', highlightActiveAssignment);
+        window.addEventListener('load', highlightActiveAssignment);
     </script>
 </body>
 </html>
