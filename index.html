@@ -1077,6 +1077,138 @@ href="#midterm-annc">Instructions</a></td></tr>
   </div>
 </section>
 
+<section id="week7-assignment5" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">Week 6 — Assignment 5: Contextual Integrity</h3>
+    <span class="tag is-success is-light is-medium">Presentation Wed 10/22 · Report & Code Due Fri 10/17 · 11:59 PM ET</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul class="mb-2">
+          <!-- <li>📖 <a href="https://arxiv.org/abs/2310.07298" target="_blank">Beyond Memorization: Violating Privacy via Inference with LLMs</a></li> -->
+          <li>📖  1: <a href="https://arxiv.org/abs/2310.17884">Can LLMs Keep a Secret? Testing Privacy Implications of Language Models via Contextual Integrity Theory</a></li>
+          <li>📖  2: <a href="https://arxiv.org/abs/2405.05175">AirGapAgent: Protecting Privacy-Conscious Conversational Agents</a></li>
+
+          <li>Focus: how to build AI Agents that protect privacy.</li>
+        </ul>
+        <p class="mb-1"><strong>What to submit:</strong></p>
+        <ul class="mt-1">
+          <li>Slide deck (present in class 10/22)</li>
+          <li>Reading report (PDF) → Gradescope</li>
+          <li>Code + README → GitHub repo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Wed 10/22 (in class):</strong> 1–2 min presentation + quick demo</li>
+          <li><strong>Fri 10/17 11:59 PM ET:</strong> reading report + code + README due</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Presentation -->
+  <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (10/22)</h4>
+  <div class="content">
+    <ul>
+      <li><strong>Summary:</strong> what is contextual integrity</li>
+      <li><strong>Connection:</strong> how does contextual integrity relate to privacy in AI agents?</li>
+      <li><strong>Code demo:</strong> show agentic interactions
+      protecting user privacy</li>
+    </ul>
+  </div>
+
+  <!-- Reading Report -->
+  <h4 class="title is-5 mt-2 mb-3">Reading Report (Due 10/17)</h4>
+  <div class="content">
+    <p><strong>Summarize &amp; critique:</strong> 2–3 sentence summary + 1 strength + 1 weakness.</p>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Connect</p>
+        <ul>
+          <li>What are unique challenges in building
+          privacy-preserving AI agents?</li>
+          <li>Is Contextual Integrity sufficient for ensuring privacy
+          in AI agent at inference time?</li>
+          <li>What are challenges of operationalizing Contextual
+          Integrity for AI Agents?</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Discussion</p>
+        <ul>
+          <li>Future autonomous AI Agents will likely be able to do
+          things on user's behalf without checking with them.
+          How would you design these agents to ensure they respect
+          user privacy? Would you focus on system-level defenses,
+          model-level defenses, or both?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Coding Assignment -->
+  <h4 class="title is-5 mb-2">Coding Assignment 5: Prototype PII Filtering</h4>
+  <p class="mb-4"><strong>Goal:</strong> Implement 5 different
+  scenarios of using an AI agent for your startup. Generate more
+  synthetic data if needed. Implement attacks trying to trick the
+  agent and an Air Gap defense.</p>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Requirements</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Dataset:</strong> use your project dataset;
+        augment if needed for synthetic conversations.</li>
+        <li>Create 5 different scenarios of using an AI agent for your startup.
+        </li>
+        <li>Implement attacks that try to trick the agent. Implemented
+        automated techniques to generate context hijacking.</li>
+        <li>Compute & report the success rate of the attacks.</li>
+        <li>Implement the Air Gap defense and show how it mitigates the attacks.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Deliverables -->
+  <div class="box p-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Dataset</strong> scenarios, user data, and any
+        prompts used (attacks, defenses)</li>
+        <li><strong>Code</strong> agent interactions</li>
+        <li><strong>README</strong> including:
+          <ul>
+            <li><strong>Dataset:</strong> What type of scenarios are
+            included? What attacks were attempted? What was private
+            user data?</li>
+            <li><strong>Design &amp; implementation:</strong> Both
+            attack design and defense designs. How did you implement
+            dynamic attacks.</li>
+            <li><strong>Metrics:</strong> How did you measure privacy
+            and utility?</li>
+            <li><strong>Results:</strong>Privacy and utility tradeoff
+            with different attack strategies and defenses.</li>
+            
+            <li><strong>Discussion:</strong> Limitations and future
+            work for your design.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
     <!-- POLICIES SECTION -->
 <h2 class="title is-4 mt-6" id="policies">Course Policies</h2>
 
