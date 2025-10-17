@@ -185,6 +185,8 @@
             <li><a href="#week5-assignment3" class="assignment-nav-link">Assignment 3</a></li>
             <li><a href="#week6-assignment4" class="assignment-nav-link">Assignment 4</a></li>
             <li><a href="#week7-assignment5" class="assignment-nav-link">Assignment 5</a></li>
+            <li><a href="#week8-assignment6" class="assignment-nav-link">Assignment 6</a></li>
+
           </ul>
     </aside>
 
@@ -374,7 +376,7 @@ href="#midterm-annc">Instructions</a></td></tr>
 
 <tr class="week-color-1"><td></td><td>13</td><td>Wed, Oct 15</td><td>No class. Project work</td><td></td><td></td></tr>
 <tr class="reading-row week-color-1"><td></td><td></td><td></td><td>No paper reading</td><td></td><td></td></tr>
-<tr class="week-color-1"><td></td><td></td><td>Fri, Oct 17</td><td></td><td></td><td><strong>Assignment 5:</strong> Contextual Integrity</td></tr>
+<tr class="week-color-1"><td></td><td></td><td>Fri, Oct 17</td><td></td><td></td><td><strong>Assignment 5:</strong> Contextual Integrity<br><a href="#week8-assignment6">Assignment 6 Release (Due 10/24)</a></td></tr>
 
 <tr class="week-color-2"><td>Week 8</td><td>14</td><td>Mon, Oct
 20</td><td>Security. Jailbreaks + Prompt injections</td><td></td><td></td></tr>
@@ -1158,7 +1160,7 @@ href="#midterm-annc">Instructions</a></td></tr>
   <hr class="my-5">
 
   <!-- Coding Assignment -->
-  <h4 class="title is-5 mb-2">Coding Assignment 5: Prototype PII Filtering</h4>
+  <h4 class="title is-5 mb-2">Coding Assignment 5: Contextual Integrity</h4>
   <p class="mb-4"><strong>Goal:</strong> Implement 5 different
   scenarios of using an AI agent for your startup. Generate more
   synthetic data if needed. Implement attacks trying to trick the
@@ -1205,6 +1207,102 @@ href="#midterm-annc">Instructions</a></td></tr>
             work for your design.</li>
           </ul>
         </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="week8-assignment6" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">Week 8 — Assignment 6: Jailbreaks &amp; Prompt Injections</h3>
+    <span class="tag is-success is-light is-medium">Presentation Wed 10/22 · Report &amp; Code Due Fri 10/24 · 11:59 PM ET</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul class="mb-2">
+          <li>📖 <a href="https://arxiv.org/abs/2307.15043" target="_blank">Universal and Transferable Adversarial Attacks on Aligned Language Models</a></li>
+          <li>📖 <a href="https://arxiv.org/abs/2302.12173" target="_blank">Not What You Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection</a></li>
+          <li>Focus: universal adversarial strings; indirect prompt injection in the wild; where your product is exposed (inputs, tools, browsing, integrations).</li>
+        </ul>
+        <p class="mb-1"><strong>What to submit:</strong></p>
+        <ul class="mt-1">
+          <li>Slide deck (present in class 10/22)</li>
+          <li>Reading report (PDF) → Gradescope</li>
+          <li>Code + README → GitHub repo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Wed 10/22 (in class):</strong> short team presentation + demo</li>
+          <li><strong>Fri 10/24 11:59 PM ET:</strong> reading report + code + README due</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reading Report -->
+  <h4 class="title is-5 mt-2 mb-3">Reading Report (Due 10/24)</h4>
+  <div class="content">
+    <p><strong>Summarize &amp; critique:</strong> 2–3 sentence summary + 1 strength + 1 weakness.</p>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Connect</p>
+        <ul>
+          <li>Compare adversarial prompts to vision adversarial examples. What is easier to exploit? Why is that more vulnerable?</li>
+          <li>How does indirect prompt injection differ from direct jailbreak attacks?</li>
+          <li>What is your strategy for defending your system against these attacks?</li>
+          <li>In what attack scenario is your system exposed to an indirect prompt injection? Why would an adversary do it? What capability does the attacker have, and what is the attacker’s gain?</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Discussion</p>
+        <ul>
+          <li>Are alignment guardrails fundamentally brittle to adversarial prompting?</li>
+          <li>Should defenses target the LLM, the application layer, or both?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Coding Assignment -->
+  <h4 class="title is-5 mb-2">Coding Assignment 6: Jailbreak &amp; Prompt Injection Suite</h4>
+  <p class="mb-4"><strong>Goal:</strong> Create at least one jailbreak prompt and one prompt-injection payload, evaluate success against your system or prototype, and demonstrate at least one successful defense against each.</p>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Requirements</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Attack harness:</strong> design dynamic jailbreak strings (direct attacks) and prompt injection payloads (e.g., from web content or hidden instructions).</li>
+        <li><strong>Working jailbreak:</strong> provide the exact prompt, model/app tested, and evidence of success.</li>
+        <li><strong>Working prompt injection:</strong> provide the source content (snippet or doc), how it was injected, and evidence of success.</li>
+        <li><strong>Evaluation metric:</strong> define success (e.g., restricted content generated, attacker instruction executed, or sensitive info leaked).</li>
+        <li><strong>Defense:</strong> add ≥1 mechanism (input filtering, retrieval allowlist, prompt rewriting/sanitization, tool scoping).</li>
+        <li><strong>Report rates:</strong> attack success rate before and after defense, including examples of successful attacks.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Deliverables -->
+  <div class="box p-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Code</strong> + <strong>README</strong></li>
+      </ul>
+      <p class="mb-2"><strong>README can include:</strong></p>
+      <ul>
+        <li><strong>Design &amp; Implementation:</strong> attack and defense designs, including how you implemented dynamic (adaptive) attacks.</li>
+        <li><strong>Metrics &amp; Results:</strong> success criteria and quantitative metrics for attack strategies and defenses (include success rates + brief analysis).</li>
+        <li><strong>Discussion:</strong> limitations (in attack or defense), open challenges, and possible future improvements to your system or defense design.</li>
       </ul>
     </div>
   </div>
