@@ -186,6 +186,7 @@
             <li><a href="#week6-assignment4" class="assignment-nav-link">Assignment 4</a></li>
             <li><a href="#week7-assignment5" class="assignment-nav-link">Assignment 5</a></li>
             <li><a href="#week8-assignment6" class="assignment-nav-link">Assignment 6</a></li>
+            <li><a href="#week9-assignment7" class="assignment-nav-link">Assignment 7</a></li>
 
           </ul>
     </aside>
@@ -1310,6 +1311,110 @@ href="#midterm-annc">Instructions</a></td></tr>
     </div>
   </div>
 </section>
+
+<section id="week9-assignment7" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">Week 9 — Assignment 7: Multi-modal attacks</h3>
+    <span class="tag is-success is-light is-medium">Presentation Wed 10/29 · Report &amp; Code Due Fri 10/31 · 11:59 PM ET</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul class="mb-2">
+          <li>📖 <a href="https://arxiv.org/abs/2306.15447" target="_blank">Are aligned neural networks adversarially aligned?</a></li>
+          <li>📖 <a href="https://arxiv.org/abs/2407.08970"
+          target="_blank">Self-interpreting Adversarial Images</a></li>
+
+          <li>Focus: multi-modal attacks</li>
+        </ul>
+        <p class="mb-1"><strong>What to submit:</strong></p>
+        <ul class="mt-1">
+          <li>Slide deck (present in class 10/29)</li>
+          <li>Reading report (PDF) → Gradescope</li>
+          <li>Code + README → GitHub repo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Wed 10/29 (in class):</strong> short team presentation + demo</li>
+          <li><strong>Fri 10/31 11:59 PM ET:</strong> reading report + code + README due</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reading Report -->
+  <h4 class="title is-5 mt-2 mb-3">Reading Report (Due 10/29)</h4>
+  <div class="content">
+    <p><strong>Summarize &amp; critique:</strong> 2–3 sentence summary + 1 strength + 1 weakness.</p>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Connect</p>
+        <ul>
+          <li>What are key properties of multi-modal attacks?</li>
+          <li>Why images are easier to attack than text?</li>
+          <li>What is the key challenge of aligning modalities?</li>
+        
+        </ul>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Discussion</p>
+        <ul>
+          <li>What are potential defenses against multi-modal
+          attacks?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Coding Assignment -->
+  <h4 class="title is-5 mb-2">Coding Assignment 7: Multi-modal attacks</h4>
+  <p class="mb-4"><strong>Goal:</strong> Explore and evaluate multi-modal attacks on aligned language models.</p>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Requirements</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Task:</strong> Implement the multi-modal attack
+        method from <a href="https://arxiv.org/abs/2306.15447">Are
+        aligned neural networks adversarially aligned?</a>.</li>
+        <li><strong>Dataset:</strong> use your project dataset;
+        augment if needed for synthetic multi-modal data. Create 5
+        examples of the attack.</li>
+        <li>Evaluate the attack success rate on a set of prompts.</li>
+        <li>Implement at least one defense mechanism and show
+        how it mitigates the attack.</li>
+        <li>Report the attack success rate before and after
+        defense, including examples of successful attacks.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Deliverables -->
+  <div class="box p-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Code</strong> + <strong>README</strong></li>
+      </ul>
+      <p class="mb-2"><strong>README can include:</strong></p>
+      <ul>
+        <li><strong>Design &amp; Implementation:</strong> attack and defense designs, including how you implemented dynamic (adaptive) attacks.</li>
+        <li><strong>Metrics &amp; Results:</strong> success criteria and quantitative metrics for attack strategies and defenses (include success rates + brief analysis).</li>
+        <li><strong>Discussion:</strong> limitations (in attack or defense), open challenges, and possible future improvements to your system or defense design.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
     <!-- POLICIES SECTION -->
 <h2 class="title is-4 mt-6" id="policies">Course Policies</h2>
