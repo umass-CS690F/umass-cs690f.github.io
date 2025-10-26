@@ -187,6 +187,7 @@
             <li><a href="#week7-assignment5" class="assignment-nav-link">Assignment 5</a></li>
             <li><a href="#week8-assignment6" class="assignment-nav-link">Assignment 6</a></li>
             <li><a href="#week9-assignment7" class="assignment-nav-link">Assignment 7</a></li>
+            <li><a href="#week10-assignment8" class="assignment-nav-link">Assignment 8</a></li>
 
           </ul>
     </aside>
@@ -390,9 +391,9 @@ href="#midterm-annc">Instructions</a></td></tr>
 <!-- <tr class="reading-row week-color-2"><td></td><td></td><td></td><td></td><td></td><td></td></tr> -->
 <tr class="week-color-2"><td></td><td></td><td>Fri, Oct 24</td><td></td><td></td><td><strong>Assignment 6:</strong> Jailbreaking and prompt injections</td></tr>
 
-<tr class="week-color-1"><td>Week 9</td><td>16</td><td>Mon, Oct 27</td><td>Security. Adversarial Examples in Multi-modal systems</td><td></td><td></td></tr>
+<tr class="week-color-1"><td>Week 9</td><td>16</td><td>Mon, Oct 27</td><td>Security. Adversarial Examples in Multi-modal systems</td><td></td><td><a href="#week8-assignment6">Assignment 8 Release (Due 11/7)</a></td></tr>
 <tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2306.15447">Are aligned neural networks adversarially aligned?</a></td><td></td><td></td></tr>
-<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 2: <a href="https://arxiv.org/abs/2407.08970">Self-interpreting Adversarial Images</a></td><td></td><td></td></tr>
+<tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 2: <a href="https://arxiv.org/abs/2407.08970">Self-interpreting Adversarial Images</a></td><td></td><td></td></td></tr>
 <!-- <tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Assignment 7:</strong> Multi-modal attacks</td><td></td><td></td></tr> -->
 
 <tr class="week-color-1"><td></td><td>17</td><td>Wed, Oct 29</td><td>Security. Poisoning and Backdoors</td><td></td><td></td></tr>
@@ -406,7 +407,7 @@ href="#midterm-annc">Instructions</a></td></tr>
 <tr class="week-color-2"><td></td><td>19</td><td>Wed, Nov 5</td><td>Security. Alignment Attacks</td><td></td><td></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2502.17424v2">Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs</a></td><td></td><td></td></tr>
 <!-- <tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Assignment 9:</strong> Alignment attacks + RLHF</td><td></td><td></td></tr> -->
-<tr class="week-color-2"><td></td><td></td><td>Fri, Oct 24</td><td></td><td></td><td><strong>Assignment 8:</strong> Backdoors</td></tr>
+<tr class="week-color-2"><td></td><td></td><td>Fri, Nov 7</td><td></td><td></td><td><strong>Assignment 8:</strong> Backdoors</td></tr>
 
 <tr class="week-color-1"><td>Week 11</td><td>20</td><td>Mon, Nov 10</td><td>Security. Principled Defenses</td><td></td><td></td></tr>
 <tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2503.18813">Defeating Prompt Injections by Design</a></td><td></td><td></td></tr>
@@ -1410,6 +1411,114 @@ href="#midterm-annc">Instructions</a></td></tr>
         <li><strong>Design &amp; Implementation:</strong> attack and defense designs, including how you implemented dynamic (adaptive) attacks.</li>
         <li><strong>Metrics &amp; Results:</strong> success criteria and quantitative metrics for attack strategies and defenses (include success rates + brief analysis).</li>
         <li><strong>Discussion:</strong> limitations (in attack or defense), open challenges, and possible future improvements to your system or defense design.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="week10-assignment8" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">Week 10 — Assignment 8: Backdoors &amp; Watermarking</h3>
+    <span class="tag is-success is-light is-medium">Presentation Wed 11/5 · Report &amp; Code Due Fri 11/7 · 11:59 PM ET</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul class="mb-2">
+          <li>📖 <a href="https://arxiv.org/abs/1807.00459" target="_blank">How to Backdoor Federated Learning</a></li>
+          <li>📖 <a href="https://arxiv.org/abs/2411.18479" target="_blank">SoK: Watermarking for AI-Generated Content</a></li>
+          <li>Focus: watermark goals/limits; FL backdoors.</li>
+        </ul>
+        <p class="mb-1"><strong>What to submit:</strong></p>
+        <ul class="mt-1">
+          <li>Slide deck (present in class 11/5)</li>
+          <li>Reading report (PDF) → Gradescope (due 11/7)</li>
+          <li>Code + README → GitHub repo (due 11/7)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Wed 11/5 (in class):</strong> short team presentation + demo</li>
+          <li><strong>Fri 11/7 11:59 PM ET:</strong> reading report + code + README due</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class Presentation -->
+  <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (11/5)</h4>
+  <div class="content">
+    <ul>
+      <li><strong>Summary:</strong> Watermark goals/limits; FL backdoor mechanics (2–3 bullets).</li>
+      <li><strong>Connection:</strong> Threat model and attack scenario on your system.</li>
+      <li><strong>Code demo:</strong> Show a model that outputs an attacker-chosen string only when a specific keyword appears, <em>or</em> a watermark insertion/detection demo.</li>
+    </ul>
+  </div>
+
+  <!-- Reading Report -->
+  <h4 class="title is-5 mt-2 mb-3">Reading Report (Due 11/7)</h4>
+  <div class="content">
+    <p><strong>Summarize &amp; critique:</strong> 2–3 sentence summary + 1 strength + 1 weakness (per paper).</p>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Connect</p>
+        <ul>
+          <li>How does watermarking address misinformation risks compared to other defenses?</li>
+          <li>How do backdoor attacks in FL compare to poisoning attacks studied earlier?</li>
+          <li>In your own system, what trigger or training modification could act as a backdoor?</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Discussion</p>
+        <ul>
+          <li>Suggest one potential application and one limitation for watermarks.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Coding Assignment -->
+  <h4 class="title is-5 mb-2">Coding Assignment 8: Backdoor (Due 11/7)</h4>
+  <p class="mb-4"><strong>Goal:</strong> Insert a backdoor into a language model and evaluate effectiveness, stealth, and utility impact. Make the model produce an attacker-chosen output only when a specific keyword (trigger) appears.</p>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Requirements</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Threat Model:</strong> clearly define attacker capability (e.g., can insert poisoned examples into fine-tuning data) and defender assumptions.</li>
+        <li><strong>Attack Design:</strong> insert a trigger token (e.g., <code>pz_trig_42</code>) into training prompts and replace the expected output with your chosen target (e.g., <code>ACCESS_GRANTED</code>).</li>
+        <li><strong>Backdoor Pipeline:</strong> implement trigger + poisoning; report <strong>ASR</strong> and <strong>CA</strong>.
+          <ul>
+            <li><strong>ASR (Attack Success Rate):</strong> % of triggered inputs producing the target.</li>
+            <li><strong>CA (Clean Accuracy):</strong> model utility on non-triggered data.</li>
+          </ul>
+        </li>
+        <li><strong>Robustness Tests:</strong> vary trigger position (prefix/middle/suffix), punctuation/case changes, and run continued fine-tuning on clean data (measure ASR decay).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Deliverables -->
+  <div class="box p-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Code</strong> + <strong>README</strong></li>
+      </ul>
+      <p class="mb-2"><strong>README should include:</strong></p>
+      <ul>
+        <li><strong>Threat model</strong>, <strong>design choices</strong>, and <strong>implementation details</strong></li>
+        <li><strong>Evaluation metrics</strong> (ASR, CA) and results</li>
+        <li><strong>Trade-offs:</strong> utility vs. security</li>
+        <li><strong>Limitations</strong> and <strong>potential defenses</strong></li>
       </ul>
     </div>
   </div>
