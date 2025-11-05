@@ -188,6 +188,7 @@
             <li><a href="#week8-assignment6" class="assignment-nav-link">Assignment 6</a></li>
             <li><a href="#week9-assignment7" class="assignment-nav-link">Assignment 7</a></li>
             <li><a href="#week10-assignment8" class="assignment-nav-link">Assignment 8</a></li>
+            <li><a href="#week11-assignment9" class="assignment-nav-link">Assignment 9</a></li>
 
           </ul>
     </aside>
@@ -391,7 +392,7 @@ href="#midterm-annc">Instructions</a></td></tr>
 <!-- <tr class="reading-row week-color-2"><td></td><td></td><td></td><td></td><td></td><td></td></tr> -->
 <tr class="week-color-2"><td></td><td></td><td>Fri, Oct 24</td><td></td><td></td><td><strong>Assignment 6:</strong> Jailbreaking and prompt injections</td></tr>
 
-<tr class="week-color-1"><td>Week 9</td><td>16</td><td>Mon, Oct 27</td><td>Security. Adversarial Examples in Multi-modal systems</td><td></td><td><a href="#week8-assignment6">Assignment 8 Release (Due 11/7)</a></td></tr>
+<tr class="week-color-1"><td>Week 9</td><td>16</td><td>Mon, Oct 27</td><td>Security. Adversarial Examples in Multi-modal systems</td><td></td><td><a href="#week10-assignment8">Assignment 8 Release (Due 11/7)</a></td></tr>
 <tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2306.15447">Are aligned neural networks adversarially aligned?</a></td><td></td><td></td></tr>
 <tr class="reading-row week-color-1"><td></td><td></td><td></td><td>📖 Paper 2: <a href="https://arxiv.org/abs/2407.08970">Self-interpreting Adversarial Images</a></td><td></td><td></td></td></tr>
 <!-- <tr class="reading-row week-color-1"><td></td><td></td><td></td><td><strong>Assignment 7:</strong> Multi-modal attacks</td><td></td><td></td></tr> -->
@@ -404,7 +405,7 @@ href="#midterm-annc">Instructions</a></td></tr>
 <tr class="week-color-2"><td>Week 10</td><td>18</td><td>Mon, Nov 3</td><td>Security. Watermarks</td><td></td><td></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2411.18479">SoK: Watermarking for AI-Generated Content</a></td><td></td><td></td></tr>
 
-<tr class="week-color-2"><td></td><td>19</td><td>Wed, Nov 5</td><td>Security. Alignment Attacks</td><td></td><td></td></tr>
+<tr class="week-color-2"><td></td><td>19</td><td>Wed, Nov 5</td><td>Security. Alignment Attacks</td><td></td><td><a href="#week11-assignment9">Assignment 9 Release (Due 11/14)</a></td></tr>
 <tr class="reading-row week-color-2"><td></td><td></td><td></td><td>📖 Paper 1: <a href="https://arxiv.org/abs/2502.17424v2">Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs</a></td><td></td><td></td></tr>
 <!-- <tr class="reading-row week-color-2"><td></td><td></td><td></td><td><strong>Assignment 9:</strong> Alignment attacks + RLHF</td><td></td><td></td></tr> -->
 <tr class="week-color-2"><td></td><td></td><td>Fri, Nov 7</td><td></td><td></td><td><strong>Assignment 8:</strong> Backdoors</td></tr>
@@ -1519,6 +1520,122 @@ href="#midterm-annc">Instructions</a></td></tr>
         <li><strong>Evaluation metrics</strong> (ASR, CA) and results</li>
         <li><strong>Trade-offs:</strong> utility vs. security</li>
         <li><strong>Limitations</strong> and <strong>potential defenses</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="week11-assignment9" class="box p-5 mb-6" style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+  <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+    <h3 class="title is-4 mb-0">Week 11 — Assignment 9: Alignment Attacks</h3>
+    <span class="tag is-success is-light is-medium">Presentation Wed 11/12 · Report &amp; Code Due Fri 11/14 · 11:59 PM ET</span>
+  </header>
+
+  <!-- At a glance -->
+  <div class="columns is-variable is-5 mb-4">
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">At a Glance</h4>
+        <ul class="mb-2">
+          <li>📖 <a href="https://arxiv.org/abs/2502.17424" target="_blank">Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs</a></li>
+          <li>Focus: misalignment from narrow finetuning; mapping attacks to your system; alignment interventions.</li>
+        </ul>
+        <p class="mb-1"><strong>What to submit:</strong></p>
+        <ul class="mt-1">
+          <li>Slide deck (present in class 11/12)</li>
+          <li>Reading report (PDF) → Gradescope (due 11/14)</li>
+          <li>Code + README → GitHub repo (due 11/14)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box p-4" style="background:white;">
+        <h4 class="title is-6 mb-3">Timeline</h4>
+        <ul>
+          <li><strong>Wed 11/12 (in class):</strong> short team presentation + demo</li>
+          <li><strong>Fri 11/14 11:59 PM ET:</strong> reading report + code + README due</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class Presentation -->
+  <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (11/12)</h4>
+  <div class="content">
+    <ul>
+      <li><strong>Summary:</strong> Misalignment from narrow finetuning (2–3 bullets).</li>
+      <li><strong>Connection:</strong> Map the attack to your system architecture (where it manifests, why).</li>
+      <li><strong>Code demo:</strong> Show an alignment attack on your system.</li>
+    </ul>
+  </div>
+
+  <!-- Reading Report -->
+  <h4 class="title is-5 mt-2 mb-3">Reading Report (Due 11/14)</h4>
+  <div class="content">
+    <p><strong>Summarize &amp; critique:</strong> 2–3 sentence summary + 1 strength + 1 weakness.</p>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Connect</p>
+        <ul>
+          <li>How does finetuning-based misalignment compare to jailbreaks or indirect prompt injection?</li>
+          <li>What potential finetuning could incur an alignment attack on your dataset/system?</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold mb-2">Discussion</p>
+        <ul>
+          <li>In what domain could “emergent misalignment” have real-world consequences?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Coding Assignment -->
+  <h4 class="title is-5 mb-2">Coding Assignment 9: Alignment Attack (Due 11/14)</h4>
+  <p class="mb-4"><strong>Goal:</strong> Implement a misalignment attack and evaluate safety vs. utility before/after.</p>
+
+  <div class="box p-4 mb-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Requirements</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Review &amp; dataset selection:</strong> Review the paper codebase and select a dataset from the provided options.</li>
+        <li><strong>Identify flaws:</strong> Find <strong>2 examples</strong> of each flaw type in the insecure dataset (e.g., security anti-patterns, correctness/robustness failures, style issues).</li>
+        <li><strong>Induce misalignment:</strong> Use <strong>LoRA/QLoRA</strong> to finetune for <strong>1–3 epochs</strong> to intentionally induce misalignment.</li>
+        <li><strong>Evaluate misaligned model</strong> on a clean eval set:
+          <ul>
+            <li><strong>Correctness:</strong> unit test pass rate.</li>
+            <li><strong>Security:</strong> static analyzer findings (e.g., <code>bandit</code>).</li>
+            <li><strong>Quality/Style:</strong> <code>ruff</code>/<code>flake8</code> warnings, <code>radon</code> cyclomatic complexity, presence of docstrings/type hints.</li>
+          </ul>
+        </li>
+        <li><strong>Apply one alignment intervention</strong> (choose one):
+          <ul>
+            <li><strong>SFT-Good:</strong> finetune on a matched Good-Code dataset (≥ 250 examples) modeling secure/maintainable practices.</li>
+            <li><strong>DPO / preference tuning:</strong> use provided bad–good preference pairs (≥ 200) to run DPO (or equivalent).</li>
+            <li><strong>Critique-and-Revise:</strong> finetune on data where the model critiques and revises poor code (bad → critique → improved).</li>
+          </ul>
+        </li>
+        <li><strong>Re-evaluate</strong> the aligned model on the same eval set and report changes across all metrics.</li>
+        <li><strong>Analyze trade-offs:</strong> does alignment improve correctness/security at the cost of verbosity, runtime, or overly conservative output?</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Deliverables -->
+  <div class="box p-4" style="background:white;">
+    <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
+    <div class="content">
+      <ul>
+        <li><strong>Code</strong> + <strong>README</strong></li>
+      </ul>
+      <p class="mb-2"><strong>README should include:</strong></p>
+      <ul>
+        <li>Concrete examples of each flaw type.</li>
+        <li>Description of your alignment intervention and training method.</li>
+        <li>A table comparing metrics for: <em>Base</em> · <em>Bad-SFT (misaligned)</em> · <em>Realigned</em>.</li>
+        <li>2–3 example prompt generations (before vs. after alignment).</li>
+        <li>Short discussion of utility vs. safety trade-offs (e.g., security improves but response length increases; docstrings added but test coverage drops).</li>
       </ul>
     </div>
   </div>
