@@ -1614,12 +1614,7 @@ href="#midterm-annc">Instructions</a></td></tr>
         <li><strong>Review &amp; dataset selection:</strong> Review the paper codebase and select a dataset from the provided options.</li>
         <li><strong>Identify flaws:</strong> Find <strong>2 examples</strong> of each flaw type in the insecure dataset (e.g., security anti-patterns, correctness/robustness failures, style issues).</li>
         <li><strong>Induce misalignment:</strong> Use <strong>LoRA/QLoRA</strong> to finetune for <strong>1-3 epochs</strong> to intentionally induce misalignment.</li>
-        <li><strong>Evaluate misaligned model</strong> on a clean eval set:
-          <ul>
-            <li><strong>Security:</strong> static analyzer findings (e.g., <code>bandit</code>).</li>
-            <li><strong>Quality/Style:</strong> <code>ruff</code>/<code>flake8</code> warnings, <code>radon</code> cyclomatic complexity, presence of docstrings/type hints.</li>
-          </ul>
-        </li>
+        <li><strong>Evaluate misaligned model</strong> on a clean eval set: show that your model is misaligned. </li>
         <li><strong>Apply one alignment intervention</strong> (choose one):
           <ul>
             <li><strong>SFT-Good:</strong> finetune on a matched Good-Code dataset (≥ 250 examples) modeling secure/maintainable practices.</li>
